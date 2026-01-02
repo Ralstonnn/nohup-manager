@@ -78,6 +78,11 @@ int parseArgs(int argc, char **argv) {
         }
     }
 
+    if (mode == PROCESS_HANDLER_MODE_UNSET) {
+        printf("Provide a valid argument\n");
+        return 0;
+    }
+
     processHandler(mode, pid, name);
 
     return 0;
@@ -114,15 +119,15 @@ void printHelp() {
     printf("\n");
     printf("Arguments:\n");
     printf("\t--help (-h) : Print the help menu\n");
-    printf(
-        "\t--kill (-k) {PID} : Pass a PID to kill child processes and the "
-        "root process\n");
+    printf("\t--kill (-k) {PID} : Pass a PID to kill child processes and the "
+           "root process\n");
     printf("\t--add (-a) {PID} : Pass a PID of a process to add it to the list "
            "of processes\n");
     printf("\t--name (-n) {name} : Used with the --add flag to add a name or "
            "description to a process\n");
     printf("\t--list (-l) : Print the list of active added processes (inactive "
            "processes are removed from the list automatically)\n");
-    printf("\t--remove-record (-rr) {PID} : Remove a process record from the list\n");
+    printf("\t--remove-record (-rr) {PID} : Remove a process record from the "
+           "list\n");
     printf("\n");
 }
