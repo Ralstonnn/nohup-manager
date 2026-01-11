@@ -62,7 +62,7 @@ int addProcess() {
     if (isEmptyStr(currentProcess.name))
         printf("Process PID: %i was added\n", currentProcess.rootPid);
     else
-        printf("Process PID: %i, name: %s was added\n", currentProcess.rootPid,
+        printf("Process PID: %i, name: \"%s\" was added\n", currentProcess.rootPid,
                currentProcess.name);
 
     return 0;

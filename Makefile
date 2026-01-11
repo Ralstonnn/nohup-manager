@@ -12,10 +12,7 @@ OBJECTS_DEBUG   := $(SOURCES:%.c=$(BUILD_DIR_DEBUG)/%.o)
 
 CC := gcc
 CFLAGS_COMMON := -Wall -Wextra -I$(INC_DIR)
-
 CFLAGS_RELEASE := $(CFLAGS_COMMON)
-
-# Debug flags
 CFLAGS_DEBUG := $(CFLAGS_COMMON) -g
 
 TARGET := nhman
